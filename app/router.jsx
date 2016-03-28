@@ -7,27 +7,30 @@ export default {
 	childRoutes: [
 		{
 			path: '/',
+			
 			getComponent: (location, cb) => {
 				require.ensure([], (require) => {
-					cb(null, require('./component/Home').default)
+					cb(null, require('./component').default)
 				})
-			}
-		},
-		{
-			path: '/home',
-			getComponent: (location, cb) => {
-				require.ensure([], (require) => {
-					cb(null, require('./component/Home').default)
-				})
-			}
-		},
-		{
-			path: '/A',
-			getComponent: (location, cb) => {
-				require.ensure([], (require) => {
-					cb(null, require('./component/PageA').default)
-				})
-			}
+			},
+			childRoutes: [
+				{
+					path: 'home',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./component/Home').default)
+						})
+					}
+				},
+				{
+					path: 'A',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./component/PageA').default)
+						})
+					}
+				}
+			]
 		}
 	]
 }

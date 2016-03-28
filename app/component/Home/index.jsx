@@ -10,10 +10,11 @@ import styles from './style.css'
 class Home extends Component {
 	render() {
 		return (
-			<div>
+			<div styleName="page">
 				<h1 styleName="title">Home</h1>
+				<p styleName="text">This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.This is Home page.</p>
 				<ul styleName="link-list">
-					<li><Link to="/A">PageA</Link></li>
+					<li><Link to="/A">&gt;&gt;PageA</Link></li>
 				</ul>
 			</div>
 		)

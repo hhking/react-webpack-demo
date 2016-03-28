@@ -2,7 +2,9 @@
 
 react、react-router和webpack的简单用例。
 
-webpack.config.js配置示例
+webpack.config.js配置示例。
+
+react-router animations example.
 
 <!-- A simple Demo for react and react-router and webpack.
 

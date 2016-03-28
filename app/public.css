@@ -32,3 +32,31 @@ img{
 	display: block;
 }
 /*reset end*/
+
+:global .example-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  transition: all .5s .1s;
+  -webkit-transition: all .5s .1s;
+}
+
+:global .example-enter.example-enter-active {
+  opacity: 1;
+  -webkit-transform: translate3d(0 0, 0);
+  transform: translate3d(0 0, 0);
+}
+
+:global .example-leave {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+:global .example-leave.example-leave-active {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
