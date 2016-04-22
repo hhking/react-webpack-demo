@@ -28,6 +28,14 @@ export default {
 							cb(null, require('./component/PageA').default)
 						})
 					}
+				},
+				{
+					path: 'TodoList',
+					getComponent: (location, cb) => {
+						require.ensure([], (require) => {
+							cb(null, require('./component/TodoListDemo').default)
+						})
+					}
 				}
 			]
 		}
